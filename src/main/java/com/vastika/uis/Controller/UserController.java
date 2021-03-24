@@ -5,9 +5,9 @@ import com.vastika.uis.service.UserService;
 import com.vastika.uis.service.UserServiceImpl;
 
 import javax.swing.*;
+import java.sql.Date;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class UserController {
@@ -22,7 +22,8 @@ public class UserController {
         long mobile = Long.parseLong(JOptionPane.showInputDialog("Enter mobile:"));
         Double salary = Double.parseDouble(JOptionPane.showInputDialog("Enter Salary:"));
         boolean active = Boolean.parseBoolean(JOptionPane.showInputDialog("Active:"));
-        LocalDate dob = LocalDate.now();
+        String sDate = JOptionPane.showInputDialog("Date<yyyy-mm-dd>:");
+        LocalDate dob = LocalDate.parse(sDate);
 
         UserDTO user = new UserDTO(id, username, password, mobile, salary, active, dob);
 
