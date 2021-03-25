@@ -49,7 +49,7 @@ public class UserController {
                     users = userService.getAllUsers();
 
                     for (UserDTO user : users) {
-                        System.out.println(user);
+
                         result = result + "UserId: " + user.getId() + "\nUserName: " + user.getUsername() + "\nPassword: "
                                 + user.getPassword() + "\nMobile Num: " + user.getMobileNo() + "\nSalary: " + user.getSalary()
                                 + "\nActive: " + user.isActive() + "\nDOB: " + user.getDob() + "\n\n";
@@ -69,7 +69,6 @@ public class UserController {
 
                     if (user != null) {
 
-                        System.out.println(user);
                         result = result + "UserId: " + user.getId() + "\nUserName: " + user.getUsername() + "\nPassword: "
                                 + user.getPassword() + "\nMobile Num: " + user.getMobileNo() + "\nSalary: " + user.getSalary()
                                 + "\nActive: " + user.isActive() + "\nDOB: " + user.getDob() + "\n\n";
